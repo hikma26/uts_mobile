@@ -16,9 +16,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
 
-    <!-- Judul Bar -->
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,14 +38,15 @@
     <!-- Isi Utama -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="491dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:padding="16dp">
 
         <!-- Kolom Kiri -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -53,7 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan Nilai"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/edtNilai2"
@@ -61,21 +64,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Masukkan Nilai"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:text="Hasil"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/edtHasil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:hint="Hasil Perhitungan" />
+                android:hint="Hasil Perhitungan"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <!-- Kolom Kanan -->
@@ -90,24 +96,28 @@
                 android:id="@+id/rbTambah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Tambah" />
 
             <RadioButton
                 android:id="@+id/rbKurang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Kurang" />
 
             <RadioButton
                 android:id="@+id/rbKali"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Kali" />
 
             <RadioButton
                 android:id="@+id/rbBagi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Bagi" />
         </RadioGroup>
     </LinearLayout>
@@ -119,13 +129,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="16dp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:backgroundTint="#6200EE"
         android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
         android:text="CLEAR"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
+
 </LinearLayout>
+
 
 package com.example.utshikma;
 
